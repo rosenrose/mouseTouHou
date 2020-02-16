@@ -18,9 +18,9 @@ void init()
 	{
 		NORMAL_MOUSE_SPEED = -1;
 	}
-	SLOW_MOUSE_SPEED =(int)floor(((float)NORMAL_MOUSE_SPEED*0.4f)+0.5f);//ËÄÉáÎåÈë
-	//´æ´¢Ä¬ÈÏÊó±êËÙ¶È
-	//						°æ±¾ºÅ	pt×Ô»ú		offsX×ø±ê	ptÓÎÏ·ËÙ¶È			xy×î´ó×îÐ¡Öµ						´°¿ÚÃû
+	SLOW_MOUSE_SPEED =(int)floor(((float)NORMAL_MOUSE_SPEED*0.4f)+0.5f);//å››èˆäº”å…¥
+	//å­˜å‚¨é»˜è®¤é¼ æ ‡é€Ÿåº¦
+	//						ç‰ˆæœ¬å·	ptè‡ªæœº		offsXåæ ‡	ptæ¸¸æˆé€Ÿåº¦			xyæœ€å¤§æœ€å°å€¼						çª—å£å
 	Game::allGm[0] = Game(12,		0x004B4514, 0x988,		(float*)0x004B2ED0, 0.065f, 0.125f, 0.635f, 0.93125f, L"th12c.exe");
 	Game::allGm[1] = Game(12,		0x004B4514, 0x988,		(float*)0x004B2ED0, 0.065f, 0.125f, 0.635f, 0.93125f, L"th12.exe");
 	Game::allGm[2] = Game(13,		0x004C22C4, 0x5C4,		(float*)0x004C0A28, 0.065f, 0.125f, 0.635f, 0.93125f, L"th13c.exe");
@@ -32,9 +32,10 @@ void init()
 	Game::allGm[8] = Game(10,		0x00477834, 0x3CC,		(float*)0x00476F78, 0.065f, 0.125f, 0.635f, 0.93125f, L"th10c.exe",				100.0f);
 	Game::allGm[9] = Game(8,		0x017D61AC ,0x0,		(float*)0x017CE8E0, 0.065f, 0.085f, 0.635f, 0.93125f, L"th08.exe",				1.0f, 8.0f,376.0f,16.0f,432.0f);
 	Game::allGm[10] = Game(7,		0x004BE408 ,0x0,		(float*)0x00575AC8, 0.065f, 0.085f, 0.635f, 0.93125f, L"th07.exe",				1.0f, 8.0f,376.0f,16.0f,432.0f);
-	Game::allGm[11] = Game(6,		0x006CAA68 ,0x0,		(float*)0x006C6EC0, 0.065f, 0.085f,	0.635f, 0.93125f, L"“Œ•ûg–‚‹½.exe",		1.0f, 8.0f,376.0f,16.0f,432.0f);
+	Game::allGm[11] = Game(6,		0x006CAA68 ,0x0,		(float*)0x006C6EC0, 0.065f, 0.085f,	0.635f, 0.93125f, L"æ¶æ›½å³ æºå«¿.exe",		1.0f, 8.0f,376.0f,16.0f,432.0f);
 	Game::allGm[12] = Game(6,		0x006CAA68 ,0x0,		(float*)0x006C6EC0, 0.065f, 0.085f, 0.635f, 0.93125f, L"th06.exe",				1.0f, 8.0f,376.0f,16.0f,432.0f);
-	Game::allGm[13] = Game(6,		0x006CAA68 ,0x0,		(float*)0x006C6EC0, 0.065f, 0.085f, 0.635f, 0.93125f, L"–|·½¼tÄ§à_.exe",		1.0f, 8.0f,376.0f,16.0f,432.0f);
+	Game::allGm[13] = Game(6,		0x006CAA68 ,0x0,		(float*)0x006C6EC0, 0.065f, 0.085f, 0.635f, 0.93125f, L"æ±æ–¹ç´…é­”éƒ·.exe",		1.0f, 8.0f,376.0f,16.0f,432.0f);
+	Game::allGm[25] = Game(17,		0x004B77D0 ,0x61C,		(float*)0x004B5918, 0.065f, 0.125f, 0.635f, 0.93125f, L"th17.exe");
 	
 	Game::allGm[14] = Game(11,		-1		   ,0x0,		(float*)0x004A7948, 0.065f, 0.125f, 0.635f, 0.93125f, L"th11.exe");
 	Game::allGm[18] = Game(128,		0x004B8A80, 0xED8,		(float*)0x004B6F58, 0.215f, 0.125f, 0.785f, 0.93125f, L"th128.exe");
@@ -46,11 +47,11 @@ void init()
 	Game::allGm[24] = Game(9,		0x004A7D94, 0x1B88,		(float*)0x004B36B8, 0.04f,	0.125f,	0.46f, 0.94125f, L"th09.exe",			1.0f,-136.0f,136.0f,32.0f,436.0f);
 	
 	Game::allGm[15] = Game(-100,	0x00FE2350,0x0,			(float*)-1		   ,0.065f, 0.125f, 0.635f, 0.93125f, L"thsg.exe",				1.0f,10.0f,374.0f,32.0f,433.0f);
-	//Ë®¾§¹¬
-	Game::allGm[16] = Game(-101,	0x00A8CDF8,0x0,			(float*)-1		   ,0.065f, 0.095f,	0.635f, 0.93125f, L"¶«·½º£»ÝÌÃ.exe",		1.0f,8.0f,376.0f,16.0f,432.0f);
-	//º£»ÝÌÃ,ÐèÒª¸Ä´°¿ÚÅäÖÃÒÔ»ñµÃ×î¼ÑÓÎÏ·ÌåÑé
+	//æ°´æ™¶å®«
+	Game::allGm[16] = Game(-101,	0x00A8CDF8,0x0,			(float*)-1		   ,0.065f, 0.095f,	0.635f, 0.93125f, L"ä¸œæ–¹æµ·æƒ å ‚.exe",		1.0f,8.0f,376.0f,16.0f,432.0f);
+	//æµ·æƒ å ‚,éœ€è¦æ”¹çª—å£é…ç½®ä»¥èŽ·å¾—æœ€ä½³æ¸¸æˆä½“éªŒ
 	Game::allGm[17] = Game(-102,	0x017D2EA0,0x0,			(float*)-1		   ,0.19f,  0.03f,	0.81f, 0.99f, L"QP Shooting.exe",		1.0f,-250.0f,250.0f,-300.0f,300.0f);
-	//QP shooting(´°¿Ú´óÐ¡1280*960)
+	//QP shooting(çª—å£å¤§å°1280*960)
 }
 
 void GetGame(HANDLE &gmHwnd, int &GmNum,int& pid,int &ArrNum)
@@ -66,7 +67,7 @@ void GetGame(HANDLE &gmHwnd, int &GmNum,int& pid,int &ArrNum)
 	}
 	if ((gmHwnd=OpenProcess(PROCESS_ALL_ACCESS, false, pid)) == NULL)
 	{
-		MessageBox(NULL, L"»ñÈ¡½ø³Ì¾ä±úÊ§°Ü,ÇëÈ·ÈÏÓÐÎÞ´ò¿ªÓÎÏ·", L"Error", MB_OK);
+		MessageBox(NULL, L"Couldn't access the game process.", L"Error", MB_OK);
 	}
 	WIND_HWND = ReturnWnd(pid);
 }
@@ -110,6 +111,7 @@ DWORD Game::isInGm()
 	case 15:
 	case 16:
 	case 165:
+	case 17:
 		ReadProcessMemory(GM_HWND, (LPCVOID)this->ptPlBasic, &ptPl, sizeof(DWORD), NULL);
 		break;
 	case -102:
@@ -147,8 +149,8 @@ int Game::MouseControl()
 		return PAUSE_FLAG;
 	RECT windRect;
 	POINT mousePos;
-	GetCursorPos(&mousePos);//»ñÈ¡Êó±ê×ø±ê
-	GetWindowRect(WIND_HWND, &windRect);//»ñÈ¡´°¿Ú×ø±ê 
+	GetCursorPos(&mousePos);//èŽ·å–é¼ æ ‡åæ ‡
+	GetWindowRect(WIND_HWND, &windRect);//èŽ·å–çª—å£åæ ‡ 
 	float relX,relY;
 	relX = (float)(mousePos.x - windRect.left) / (float)(windRect.right - windRect.left);
 	relY = (float)(mousePos.y - windRect.top) / (float)(windRect.bottom - windRect.top);
@@ -200,6 +202,7 @@ int Game::MouseControl()
 	case 15:
 	case 16:
 	case 165:
+	case 17:
 	{
 		int finalX, finalY;
 		finalX = (int)(this->StageXMin + relX * StageXSz) * ratio;

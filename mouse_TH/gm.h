@@ -1,4 +1,3 @@
-
 void GetGame(HANDLE &gmHwnd, int &Gmnum,int& pid,int& arr_num);
 void init();
 void init2();
@@ -6,11 +5,11 @@ class Game
 {
 public:
 	static Game allGm[40];
-	float ratio;//int-float±ÈÀý
+	float ratio;//int-floatæ¯”ä¾‹
 	int MouseControl();
 	bool isPause();
 	DWORD isInGm();
-	int num;//µÚ¼¸×÷,15=gzz
+	int num;//ç¬¬å‡ ä½œ,15=gzz
 	DWORD ptPlBasic;
 	DWORD ptPloffs;
 	float* ptRunSpd;
